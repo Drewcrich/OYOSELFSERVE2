@@ -1,27 +1,68 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import GoogleMap from '../components/GoogleMap';
 import PhotoSlideshow from '../components/PhotoSlideshow';
+import GoogleMap from '../components/GoogleMap';
+import CustomerReviews from '../components/CustomerReviews';
 
 const HomePage = () => {
   const navigate = useNavigate();
 
-  // Simplified photo selection - just one key slideshow
+  // Updated facility photos slideshow
   const facilityPhotos = [
     {
-      src: '/Screenshot2025-06-17100127.png',
-      alt: 'Storage Facility',
-      caption: 'Our secure storage facility in Urbana'
+      src: '/goodentrencephoto.png',
+      alt: 'Facility Entrance',
+      caption: 'Easy access to our secure storage facility'
+    },
+    {
+      src: '/entrancefardistance.png',
+      alt: 'Facility Overview',
+      caption: 'Our storage facility from a distance'
+    },
+    {
+      src: '/Screenshot2025-07-05132743.png',
+      alt: 'Container Interior View',
+      caption: 'Spacious 320 sq ft container interior'
+    },
+    {
+      src: '/Screenshot2025-07-05132758.png',
+      alt: 'Container Storage Space',
+      caption: 'Clean, secure storage space'
+    },
+    {
+      src: '/Screenshot2025-07-05132336.png',
+      alt: 'Container Access',
+      caption: 'Easy container access and loading'
+    },
+    {
+      src: '/Screenshot2025-06-17101424.png',
+      alt: 'Storage Container',
+      caption: 'Professional storage containers'
+    },
+    {
+      src: '/Screenshot2025-06-17100319.png',
+      alt: 'Container Exterior',
+      caption: 'Durable steel construction'
+    },
+    {
+      src: '/Screenshot2025-06-17100306.png',
+      alt: 'Container Setup',
+      caption: 'Well-organized container layout'
+    },
+    {
+      src: '/Screenshot2025-06-17100253.png',
+      alt: 'Storage Area',
+      caption: 'Secure storage environment'
+    },
+    {
+      src: '/Screenshot2025-07-05132720.png',
+      alt: 'Container Interior',
+      caption: 'Complete weather protection'
     },
     {
       src: '/Screenshot2025-06-17100212.png',
-      alt: 'Easy Access',
+      alt: 'Drive-up Access',
       caption: 'Drive right up to your container'
-    },
-    {
-      src: '/Screenshot2025-07-05132432.png',
-      alt: 'Container Interior',
-      caption: 'Spacious 320 sq ft interior'
     }
   ];
 
@@ -32,12 +73,13 @@ const HomePage = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h1 className="text-6xl font-bold text-gray-800 mb-6">
-              Storage Made Simple
+              Storage Units Near University of Illinois
             </h1>
             <p className="text-2xl text-gray-600 mb-4">
-              Rent a storage container in Urbana, IL
+              Student Storage, Business Inventory & Moving Solutions in Urbana, IL
             </p>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
+              Cheap storage containers perfect for University of Illinois students, businesses, and moving. 
               No office visits. No paperwork. Book online, get your container details by text, 
               and start storing the same day.
             </p>
@@ -123,58 +165,154 @@ const HomePage = () => {
         </div>
       </div>
 
+      {/* Trust and Credibility Section */}
+      <div className="trust-section py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-800 mb-8">Trusted by Our Community</h2>
+          </div>
+          
+          {/* White Card Container */}
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-white rounded-2xl shadow-lg p-12">
+              <div className="grid md:grid-cols-3 gap-8 text-center">
+                {/* Happy Customers */}
+                <div>
+                  <div className="text-5xl font-bold text-green-500 mb-3">5000+</div>
+                  <h4 className="text-xl font-medium text-gray-600">Happy Customers</h4>
+                </div>
+                
+                {/* Years in Business */}
+                <div>
+                  <div className="text-5xl font-bold text-green-500 mb-3">30+</div>
+                  <h4 className="text-xl font-medium text-gray-600">Years in Business</h4>
+                </div>
+                
+                {/* 24/7 Access */}
+                <div>
+                  <div className="text-5xl font-bold text-green-500 mb-3">24/7</div>
+                  <h4 className="text-xl font-medium text-gray-600">Access Available</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* SEO-Optimized Use Cases Section */}
+      <div className="use-cases-section py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-800 mb-6">Perfect Storage Solutions for Every Need</h2>
+            <p className="text-xl text-gray-600">Serving University of Illinois students, businesses, and families in Urbana</p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Student Storage */}
+            <div className="bg-blue-50 rounded-lg p-8 text-center">
+              <div className="text-5xl mb-6">🎓</div>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">Student Storage Urbana</h3>
+              <p className="text-gray-700 mb-6">
+                Perfect for University of Illinois students! Store dorm furniture, textbooks, and belongings 
+                during summer break or semester abroad. Close to campus with easy access.
+              </p>
+              <ul className="text-left text-gray-600 space-y-2">
+                <li>✓ Summer storage for dorm items</li>
+                <li>✓ Semester break solutions</li>
+                <li>✓ Near University of Illinois campus</li>
+                <li>✓ Affordable student rates</li>
+              </ul>
+            </div>
+
+            {/* Business Storage */}
+            <div className="bg-green-50 rounded-lg p-8 text-center">
+              <div className="text-5xl mb-6">🏢</div>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">Business Inventory Storage</h3>
+              <p className="text-gray-700 mb-6">
+                Secure business inventory storage in Urbana. Perfect for excess stock, seasonal items, 
+                equipment, and documents. 24/7 access means you can restock anytime.
+              </p>
+              <ul className="text-left text-gray-600 space-y-2">
+                <li>✓ Inventory overflow storage</li>
+                <li>✓ Equipment and supplies</li>
+                <li>✓ Document archiving</li>
+                <li>✓ 24/7 business access</li>
+              </ul>
+            </div>
+
+            {/* Moving Storage */}
+            <div className="bg-orange-50 rounded-lg p-8 text-center">
+              <div className="text-5xl mb-6">📦</div>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">Moving Storage Solutions</h3>
+              <p className="text-gray-700 mb-6">
+                Temporary storage during your move to or from Urbana. Store belongings between 
+                homes, during renovations, or while house hunting. Flexible rental terms.
+              </p>
+              <ul className="text-left text-gray-600 space-y-2">
+                <li>✓ Temporary moving storage</li>
+                <li>✓ Home renovation storage</li>
+                <li>✓ Flexible rental periods</li>
+                <li>✓ Drive-up convenience</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center mt-12">
+            <p className="text-xl text-gray-600 mb-6">
+              Need cheap storage containers in Urbana? We have the perfect solution!
+            </p>
+            <button 
+              onClick={() => navigate('/book-tour')}
+              className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg text-xl font-semibold transition-colors duration-200"
+            >
+              Find Your Storage Solution
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Customer Reviews Section */}
+      <CustomerReviews />
+
       {/* Simplified Pricing Section */}
       <div id="pricing" className="pricing-section py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-gray-800 mb-6">Simple Pricing</h2>
+            <h2 className="text-5xl font-bold text-gray-800 mb-6">Grand Opening Pricing</h2>
             <p className="text-2xl text-gray-600 mb-6">
               All containers are the same size: 40ft × 8ft × 10ft (320 square feet)
             </p>
+            <p className="text-2xl text-gray-600 mb-6">
+              Complete weather protection for your belongings
+            </p>
             <div className="bg-yellow-100 border border-yellow-300 rounded-lg p-6 inline-block">
               <p className="text-2xl font-semibold text-yellow-800">
-                💰 Save money by paying ahead: $75/month with 6-month plan
+                🎉 Grand Opening Special: $95/month or save with 6-month prepay at $75/month
               </p>
             </div>
+            <p className="text-lg text-gray-600 mt-4">
+              6-month minimum lease • Limited time launch pricing
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Month-to-Month Plan */}
-            <div className="bg-white border-2 border-gray-200 rounded-lg p-8 text-center">
-              <h3 className="text-3xl font-bold mb-6">Month-to-Month</h3>
-              <div className="text-5xl font-bold text-gray-800 mb-4">$115<span className="text-2xl">/month</span></div>
-              <p className="text-xl text-gray-600 mb-8">Pay each month</p>
-              
-              <ul className="text-left space-y-3 mb-8 text-lg">
-                <li className="flex items-center"><span className="text-green-500 mr-3 text-xl">✓</span>320 sq ft secure container</li>
-                <li className="flex items-center"><span className="text-green-500 mr-3 text-xl">✓</span>24/7 access</li>
-                <li className="flex items-center"><span className="text-green-500 mr-3 text-xl">✓</span>Drive-up access</li>
-                <li className="flex items-center"><span className="text-green-500 mr-3 text-xl">✓</span>No long-term commitment</li>
-              </ul>
-              
-              <button 
-                onClick={() => navigate('/book-tour')}
-                className="w-full bg-gray-500 hover:bg-gray-600 text-white py-4 px-6 rounded-lg text-xl font-semibold transition-colors duration-200"
-              >
-                Choose This Plan
-              </button>
-            </div>
-
-            {/* 3-Month Plan */}
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* 6-Month Standard Plan */}
             <div className="bg-white border-2 border-blue-500 rounded-lg p-8 text-center relative">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-6 py-2 rounded-full text-lg font-semibold">
                 Most Popular
               </div>
-              <h3 className="text-3xl font-bold mb-6">3-Month Plan</h3>
-              <div className="text-5xl font-bold text-gray-800 mb-2">$105<span className="text-2xl">/month</span></div>
-              <div className="text-lg text-gray-500 line-through mb-4">Was $115/month</div>
-              <p className="text-xl text-gray-600 mb-8">Save $10 per month</p>
+              <h3 className="text-3xl font-bold mb-6">6-Month Standard</h3>
+              <div className="text-5xl font-bold text-gray-800 mb-4">$95<span className="text-2xl">/month</span></div>
+              <p className="text-xl text-gray-600 mb-4">Pay monthly within 6-month lease</p>
+              <p className="text-lg text-gray-500 mb-8">Total: $570 for 6 months</p>
               
               <ul className="text-left space-y-3 mb-8 text-lg">
                 <li className="flex items-center"><span className="text-green-500 mr-3 text-xl">✓</span>320 sq ft secure container</li>
+                <li className="flex items-center"><span className="text-green-500 mr-3 text-xl">✓</span>Complete weather protection</li>
                 <li className="flex items-center"><span className="text-green-500 mr-3 text-xl">✓</span>24/7 access</li>
                 <li className="flex items-center"><span className="text-green-500 mr-3 text-xl">✓</span>Drive-up access</li>
-                <li className="flex items-center"><span className="text-green-500 mr-3 text-xl">✓</span>$30 total savings</li>
+                <li className="flex items-center"><span className="text-green-500 mr-3 text-xl">✓</span>6-month minimum commitment</li>
               </ul>
               
               <button 
@@ -185,21 +323,23 @@ const HomePage = () => {
               </button>
             </div>
 
-            {/* 6-Month Plan */}
+            {/* 6-Month Saver Plan */}
             <div className="bg-white border-2 border-green-500 rounded-lg p-8 text-center relative">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-2 rounded-full text-lg font-semibold">
                 Best Value
               </div>
-              <h3 className="text-3xl font-bold mb-6">6-Month Plan</h3>
+              <h3 className="text-3xl font-bold mb-6">6-Month Saver</h3>
               <div className="text-5xl font-bold text-gray-800 mb-2">$75<span className="text-2xl">/month</span></div>
-              <div className="text-lg text-gray-500 line-through mb-4">Was $115/month</div>
-              <p className="text-xl text-gray-600 mb-8">Save $40 per month</p>
+              <div className="text-lg text-gray-500 line-through mb-4">Was $95/month</div>
+              <p className="text-xl text-gray-600 mb-4">Pay 6 months upfront and save</p>
+              <p className="text-lg text-green-600 font-semibold mb-8">Total: $450 (Save $120!)</p>
               
               <ul className="text-left space-y-3 mb-8 text-lg">
                 <li className="flex items-center"><span className="text-green-500 mr-3 text-xl">✓</span>320 sq ft secure container</li>
+                <li className="flex items-center"><span className="text-green-500 mr-3 text-xl">✓</span>Complete weather protection</li>
                 <li className="flex items-center"><span className="text-green-500 mr-3 text-xl">✓</span>24/7 access</li>
                 <li className="flex items-center"><span className="text-green-500 mr-3 text-xl">✓</span>Drive-up access</li>
-                <li className="flex items-center"><span className="text-green-500 mr-3 text-xl">✓</span>$240 total savings</li>
+                <li className="flex items-center"><span className="text-green-500 mr-3 text-xl">✓</span>$120 total savings</li>
               </ul>
               
               <button 
@@ -209,6 +349,7 @@ const HomePage = () => {
                 Choose This Plan
               </button>
             </div>
+
           </div>
         </div>
       </div>
@@ -258,8 +399,29 @@ const HomePage = () => {
             <p className="text-xl text-gray-600 mt-4">Email: Drewcrichardson1999@gmail.com</p>
           </div>
           
-          <div className="max-w-4xl mx-auto">
-            <GoogleMap />
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 items-start">
+              {/* Entrance Photo */}
+              <div className="space-y-4">
+                <h3 className="text-2xl font-semibold text-gray-800 text-center">Our Facility Entrance</h3>
+                <div className="rounded-lg overflow-hidden shadow-lg">
+                  <img 
+                    src="/goodentrencephoto.png" 
+                    alt="Own Your Own Storage facility entrance at 1502 Airport Road, Urbana IL" 
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+                <p className="text-gray-600 text-center">Easy to find location on Airport Road</p>
+              </div>
+              
+              {/* Google Map */}
+              <div className="space-y-4">
+                <h3 className="text-2xl font-semibold text-gray-800 text-center">Find Us on the Map</h3>
+                <div className="rounded-lg overflow-hidden shadow-lg">
+                  <GoogleMap />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
