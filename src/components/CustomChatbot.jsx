@@ -182,21 +182,18 @@ const CustomChatbot = () => {
   ];
 
   const handleQuickQuestion = (question) => {
-    setInputText(question);
-    // Auto-send the quick question
-    setTimeout(() => {
-      const userMessage = {
-        type: 'user',
-        text: question,
-        timestamp: new Date()
-      };
-      const botResponse = {
-        type: 'bot',
-        text: findBestAnswer(question),
-        timestamp: new Date()
-      };
-      setMessages(prev => [...prev, userMessage, botResponse]);
-    }, 100);
+    // Auto-send the quick question without setting input text
+    const userMessage = {
+      type: 'user',
+      text: question,
+      timestamp: new Date()
+    };
+    const botResponse = {
+      type: 'bot',
+      text: findBestAnswer(question),
+      timestamp: new Date()
+    };
+    setMessages(prev => [...prev, userMessage, botResponse]);
   };
 
   return (

@@ -336,3 +336,444 @@ body {
   }
 }
 
+
+
+/* Pricing Page Styles */
+.pricing-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--light-green-bg);
+  min-height: 100vh;
+}
+
+/* Pricing Header */
+.pricing-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.pricing-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.pricing-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-gray);
+  margin-bottom: 0;
+}
+
+/* Container Info Section */
+.container-info {
+  margin-bottom: 3rem;
+}
+
+.container-size-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.container-size-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+}
+
+.size-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.size-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.size-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-green);
+}
+
+.size-label {
+  font-size: 1rem;
+  color: var(--text-gray);
+  margin-top: 0.5rem;
+}
+
+.size-description {
+  font-size: 1.125rem;
+  color: var(--text-gray);
+  margin: 0;
+}
+
+/* Grand Opening Banner */
+.grand-opening-banner {
+  background: linear-gradient(135deg, var(--primary-green), #16a34a);
+  color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.grand-opening-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.grand-opening-subtitle {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* Pricing Plans */
+.pricing-plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.pricing-plan {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-plan:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-plan.standard {
+  border: 3px solid var(--primary-green);
+}
+
+.pricing-plan.saver {
+  border: 3px solid #f59e0b;
+}
+
+.plan-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.plan-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.plan-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.price-amount {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--primary-green);
+}
+
+.price-period {
+  font-size: 1.25rem;
+  color: var(--text-gray);
+  margin-left: 0.25rem;
+}
+
+.price-original {
+  font-size: 1rem;
+  color: var(--text-gray);
+  text-decoration: line-through;
+  margin-bottom: 0.5rem;
+}
+
+.plan-description {
+  font-size: 1.125rem;
+  color: var(--text-gray);
+  margin-bottom: 0.5rem;
+}
+
+.plan-total {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0;
+}
+
+.plan-features {
+  margin-bottom: 2rem;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.feature-icon {
+  color: var(--primary-green);
+  font-weight: bold;
+  margin-right: 0.75rem;
+  font-size: 1.125rem;
+}
+
+.feature-text {
+  color: var(--text-dark);
+  font-size: 1rem;
+}
+
+.plan-button {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.standard-button {
+  background: var(--primary-green);
+  color: white;
+}
+
+.standard-button:hover {
+  background: #16a34a;
+}
+
+.saver-button {
+  background: #f59e0b;
+  color: white;
+}
+
+.saver-button:hover {
+  background: #d97706;
+}
+
+.plan-badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: white;
+}
+
+.pricing-plan.standard .plan-badge {
+  background: var(--primary-green);
+}
+
+.pricing-plan.saver .plan-badge.best-value {
+  background: #f59e0b;
+}
+
+/* Security Deposit Info */
+.security-deposit-info {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+}
+
+.deposit-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.deposit-description {
+  font-size: 1.125rem;
+  color: var(--text-gray);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* What's Included Section */
+.whats-included {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+}
+
+.included-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text-dark);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.included-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.included-item {
+  text-align: center;
+}
+
+.included-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.included-item h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.included-item p {
+  color: var(--text-gray);
+  margin: 0;
+}
+
+/* FAQ Section */
+.pricing-faq {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+}
+
+.faq-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text-dark);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.faq-item {
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+}
+
+.faq-question {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.faq-answer {
+  color: var(--text-gray);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Call to Action */
+.pricing-cta {
+  background: linear-gradient(135deg, var(--primary-green), #16a34a);
+  color: white;
+  padding: 3rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.cta-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.cta-description {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background: white;
+  color: var(--primary-green);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #f9fafb;
+  transform: translateY(-2px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .pricing-page {
+    padding: 1rem;
+  }
+  
+  .pricing-title {
+    font-size: 2rem;
+  }
+  
+  .pricing-subtitle {
+    font-size: 1rem;
+  }
+  
+  .pricing-plans {
+    grid-template-columns: 1fr;
+  }
+  
+  .size-details {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .included-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .grand-opening-title {
+    font-size: 2rem;
+  }
+  
+  .cta-title {
+    font-size: 2rem;
+  }
+}
+
