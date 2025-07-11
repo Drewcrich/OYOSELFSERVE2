@@ -76,20 +76,6 @@ const BookTourPage = () => {
             scrolling="no"
           />
         </div>
-        
-        {/* Instructions for JotForm Configuration */}
-        <div className="form-instructions" style={{ 
-          background: '#f0f9ff', 
-          padding: '1rem', 
-          borderRadius: '8px', 
-          marginTop: '1rem',
-          fontSize: '0.9rem',
-          color: '#1e40af'
-        }}>
-          <p><strong>📝 JotForm Setup Required:</strong></p>
-          <p>Configure your JotForm to redirect to: <code>https://ownyourownselfserve.com/book-tour?submitted=true</code></p>
-          <p>This enables automatic redirect to the confirmation page for Google Ads tracking.</p>
-        </div>
       </div>
 
       {/* Process Explanation */}
