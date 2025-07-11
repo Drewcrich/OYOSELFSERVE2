@@ -10,23 +10,55 @@ const BookTourPage = () => {
   useEffect(() => {
     // Listen for JotForm submission completion
     const handleJotFormSubmission = (event) => {
-      if (event.origin === 'https://form.jotform.com') {
-        if (event.data && typeof event.data === 'string') {
+      console.log('Received message:', event); // Debug log
+      
+      // Check if message is from JotForm
+      if (event.origin === 'https://form.jotform.com' || event.origin === 'https://www.jotform.com') {
+        console.log('Message from JotForm:', event.data); // Debug log
+        
+        if (event.data) {
+          let shouldRedirect = false;
+          
+          // Try to parse as JSON first
           try {
             const data = JSON.parse(event.data);
-            if (data.type === 'form_submit' || data.action === 'submit') {
-              // Redirect to confirmation page after successful submission
-              setTimeout(() => {
-                navigate('/booking-confirmed');
-              }, 2000); // 2 second delay to allow form processing
+            console.log('Parsed data:', data); // Debug log
+            
+            if (data.type === 'form_submit' || 
+                data.action === 'submit' || 
+                data.type === 'form_ready' ||
+                data.type === 'form_loaded' ||
+                data.formSubmit === true) {
+              shouldRedirect = true;
             }
           } catch (e) {
-            // If data is not JSON, check for submission indicators
-            if (event.data.includes('submit') || event.data.includes('success')) {
-              setTimeout(() => {
-                navigate('/booking-confirmed');
-              }, 2000);
+            // If not JSON, check string content
+            const dataStr = String(event.data).toLowerCase();
+            console.log('String data:', dataStr); // Debug log
+            
+            if (dataStr.includes('submit') || 
+                dataStr.includes('success') || 
+                dataStr.includes('thank') ||
+                dataStr.includes('complete') ||
+                dataStr.includes('form_submit')) {
+              shouldRedirect = true;
             }
+          }
+          
+          // Also check for iframe height changes which often indicate form submission
+          if (typeof event.data === 'object' && event.data.height) {
+            console.log('Height change detected:', event.data.height);
+            // If height becomes very small, it might indicate form submission
+            if (event.data.height < 200) {
+              shouldRedirect = true;
+            }
+          }
+          
+          if (shouldRedirect) {
+            console.log('Redirecting to booking-confirmed'); // Debug log
+            setTimeout(() => {
+              navigate('/booking-confirmed');
+            }, 3000); // Increased delay to 3 seconds
           }
         }
       }
@@ -34,10 +66,32 @@ const BookTourPage = () => {
 
     // Add event listener for JotForm messages
     window.addEventListener('message', handleJotFormSubmission);
+    
+    // Also add a backup method - check for form submission every few seconds
+    const checkForSubmission = setInterval(() => {
+      const iframe = document.getElementById('JotFormIFrame-251895754464067');
+      if (iframe) {
+        try {
+          // Check if iframe content has changed to thank you page
+          const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+          if (iframeDoc && iframeDoc.body) {
+            const bodyText = iframeDoc.body.innerText.toLowerCase();
+            if (bodyText.includes('thank you') || bodyText.includes('submitted') || bodyText.includes('success')) {
+              console.log('Form submission detected via iframe check');
+              clearInterval(checkForSubmission);
+              navigate('/booking-confirmed');
+            }
+          }
+        } catch (e) {
+          // Cross-origin restrictions prevent iframe access, this is expected
+        }
+      }
+    }, 2000);
 
-    // Cleanup event listener
+    // Cleanup
     return () => {
       window.removeEventListener('message', handleJotFormSubmission);
+      clearInterval(checkForSubmission);
     };
   }, [navigate]);
 
