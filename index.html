@@ -59,6 +59,77 @@
     <!-- Additional SEO -->
     <link rel="canonical" href="https://lfuknmco.manus.space" />
     <meta name="theme-color" content="#10B981" />
+    
+    <!-- Global Booking Confirmation Redirect Script -->
+    <script>
+      console.log('Global redirect script loaded');
+      
+      // Wait for page to load, then start monitoring
+      window.addEventListener('load', function() {
+        console.log('Page loaded, starting booking confirmation monitoring');
+        
+        // Only run on book-tour page
+        function startMonitoring() {
+          if (window.location.pathname === '/book-tour') {
+            console.log('On book-tour page, starting redirect monitoring');
+            
+            let checkCount = 0;
+            const maxChecks = 60; // Check for 3 minutes max
+            
+            const checkForThankYou = function() {
+              checkCount++;
+              console.log('Check #' + checkCount + ': Looking for Thank You message...');
+              
+              // Get all text on the page
+              const pageText = document.body.innerText.toLowerCase();
+              
+              // Look for thank you message
+              if (pageText.includes('thank you') && 
+                  (pageText.includes('submission') || pageText.includes('received'))) {
+                console.log('✅ Thank You message detected! Redirecting to booking-confirmed...');
+                clearInterval(monitorInterval);
+                
+                // Redirect after 2 seconds
+                setTimeout(function() {
+                  window.location.href = '/booking-confirmed';
+                }, 2000);
+                
+                return true;
+              }
+              
+              // Stop checking after max attempts
+              if (checkCount >= maxChecks) {
+                console.log('Stopped monitoring after ' + maxChecks + ' checks');
+                clearInterval(monitorInterval);
+              }
+              
+              return false;
+            };
+            
+            // Start checking every 3 seconds
+            const monitorInterval = setInterval(checkForThankYou, 3000);
+            
+            // Also check immediately and after short delays
+            setTimeout(checkForThankYou, 1000);
+            setTimeout(checkForThankYou, 5000);
+            setTimeout(checkForThankYou, 8000);
+          }
+        }
+        
+        // Start monitoring immediately
+        startMonitoring();
+        
+        // Also monitor for route changes (React Router)
+        let currentPath = window.location.pathname;
+        setInterval(function() {
+          if (window.location.pathname !== currentPath) {
+            currentPath = window.location.pathname;
+            console.log('Route changed to:', currentPath);
+            startMonitoring();
+          }
+        }, 1000);
+      });
+    </script>
   </head>
   <body>
     <div id="root"></div>
