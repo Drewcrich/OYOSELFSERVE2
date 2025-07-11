@@ -1,11 +1,45 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 import HorizontalTimeline from '../components/HorizontalTimeline';
 import ProcessFlowchart from '../components/ProcessFlowchart';
 import FAQSection from '../components/FAQSection';
 
 const BookTourPage = () => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    // Listen for JotForm submission completion
+    const handleJotFormSubmission = (event) => {
+      if (event.origin === 'https://form.jotform.com') {
+        if (event.data && typeof event.data === 'string') {
+          try {
+            const data = JSON.parse(event.data);
+            if (data.type === 'form_submit' || data.action === 'submit') {
+              // Redirect to confirmation page after successful submission
+              setTimeout(() => {
+                navigate('/booking-confirmed');
+              }, 2000); // 2 second delay to allow form processing
+            }
+          } catch (e) {
+            // If data is not JSON, check for submission indicators
+            if (event.data.includes('submit') || event.data.includes('success')) {
+              setTimeout(() => {
+                navigate('/booking-confirmed');
+              }, 2000);
+            }
+          }
+        }
+      }
+    };
+
+    // Add event listener for JotForm messages
+    window.addEventListener('message', handleJotFormSubmission);
+
+    // Cleanup event listener
+    return () => {
+      window.removeEventListener('message', handleJotFormSubmission);
+    };
+  }, [navigate]);
 
   return (
     <div className="booking-container">
@@ -85,7 +119,8 @@ const BookTourPage = () => {
             color: '#6b7280' 
           }}>
             ✅ You'll receive instant email confirmation<br/>
-            📱 Container details sent via text within 30 minutes
+            📱 Container details sent via text within 30 minutes<br/>
+            🔄 You'll be redirected to confirmation page after submission
           </div>
         </div>
       </div>
@@ -99,68 +134,113 @@ const BookTourPage = () => {
       {/* FAQ Section */}
       <FAQSection />
 
-      {/* Rental Process Information */}
-      <div className="bg-white rounded-lg shadow-md p-8 my-8">
-        <h2 className="text-2xl font-bold mb-6 text-gray-800">
-          After your tour, if you decide to rent:
-        </h2>
-        
-        <div className="grid md:grid-cols-4 gap-4 mb-6">
-          <div className="text-center">
-            <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
-              <span className="text-2xl">📝</span>
-            </div>
-            <h3 className="font-semibold text-gray-700 mb-1">Electronic Lease</h3>
-            <p className="text-sm text-gray-600">Simple DocuSign lease</p>
-            <p className="text-xs text-green-600 mt-1">~3 minutes</p>
-          </div>
-          
-          <div className="text-center">
-            <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
-              <span className="text-2xl">💳</span>
-            </div>
-            <h3 className="font-semibold text-gray-700 mb-1">Payment Setup</h3>
-            <p className="text-sm text-gray-600">Secure Rent Manager portal</p>
-            <p className="text-xs text-blue-600 mt-1">~5 minutes</p>
-          </div>
-          
-          <div className="text-center">
-            <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
-              <span className="text-2xl">🔑</span>
-            </div>
-            <h3 className="font-semibold text-gray-700 mb-1">Access Code</h3>
-            <p className="text-sm text-gray-600">Becomes permanent</p>
-            <p className="text-xs text-purple-600 mt-1">Instant</p>
-          </div>
-          
-          <div className="text-center">
-            <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
-              <span className="text-2xl">✅</span>
-            </div>
-            <h3 className="font-semibold text-gray-700 mb-1">Complete</h3>
-            <p className="text-sm text-gray-600">No paperwork, no office visits</p>
-            <p className="text-xs text-green-600 mt-1">Done!</p>
-          </div>
-        </div>
-        
-        <div className="text-center">
-          <button 
-            onClick={() => {
-              navigate('/rental-setup');
-              setTimeout(() => window.scrollTo(0, 0), 100);
-            }}
-            className="inline-flex items-center text-green-600 hover:text-green-700 font-medium bg-transparent border-none cursor-pointer text-lg"
-          >
-            Learn more about our payment setup process →
-          </button>
-        </div>
-      </div>
+      <style jsx>{`
+        .booking-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 2rem 1rem;
+          background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+          min-height: 100vh;
+        }
 
-      {/* JotForm Script */}
-      <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
-      <script dangerouslySetInnerHTML={{
-        __html: `window.jotformEmbedHandler && window.jotformEmbedHandler("iframe[id='JotFormIFrame-251895754464067']", "https://form.jotform.com/")`
-      }} />
+        .booking-header {
+          text-align: center;
+          margin-bottom: 3rem;
+        }
+
+        .booking-title {
+          font-size: 2.5rem;
+          font-weight: bold;
+          color: #1e40af;
+          margin-bottom: 1rem;
+        }
+
+        .booking-subtitle {
+          font-size: 1.25rem;
+          color: #64748b;
+          margin-bottom: 2rem;
+        }
+
+        .process-steps {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 2rem;
+          margin-bottom: 3rem;
+        }
+
+        .process-card {
+          background: white;
+          padding: 2rem;
+          border-radius: 12px;
+          text-align: center;
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+          transition: transform 0.2s ease;
+        }
+
+        .process-card:hover {
+          transform: translateY(-4px);
+        }
+
+        .process-number {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.5rem;
+          font-weight: bold;
+          color: white;
+          margin: 0 auto 1rem;
+        }
+
+        .process-number.green {
+          background: linear-gradient(135deg, #10b981, #059669);
+        }
+
+        .process-number.blue {
+          background: linear-gradient(135deg, #3b82f6, #2563eb);
+        }
+
+        .process-number.purple {
+          background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+        }
+
+        .process-title {
+          font-size: 1.25rem;
+          font-weight: bold;
+          color: #1f2937;
+          margin-bottom: 0.5rem;
+        }
+
+        .process-description {
+          color: #6b7280;
+          font-size: 0.875rem;
+        }
+
+        .form-container {
+          margin: 3rem 0;
+        }
+
+        @media (max-width: 768px) {
+          .booking-title {
+            font-size: 2rem;
+          }
+          
+          .booking-subtitle {
+            font-size: 1rem;
+          }
+          
+          .process-steps {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+          }
+          
+          .process-card {
+            padding: 1.5rem;
+          }
+        }
+      `}</style>
     </div>
   );
 };

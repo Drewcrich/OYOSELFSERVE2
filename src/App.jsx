@@ -18,6 +18,7 @@ import AccessibilityPage from './pages/AccessibilityPage';
 import CookiePolicyPage from './pages/CookiePolicyPage';
 import RefundPolicyPage from './pages/RefundPolicyPage';
 import AboutUsPage from './pages/AboutUsPage';
+import BookingConfirmedPage from './pages/BookingConfirmedPage';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
             <Route path="/cookie-policy" element={<CookiePolicyPage />} />
             <Route path="/refund-policy" element={<RefundPolicyPage />} />
             <Route path="/about" element={<AboutUsPage />} />
+            <Route path="/booking-confirmed" element={<BookingConfirmedPage />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </main>
