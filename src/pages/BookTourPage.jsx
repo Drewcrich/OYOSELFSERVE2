@@ -1,13 +1,4 @@
-import { useNavigate } from 'react-router-dom';
-
 const BookTourPage = () => {
-  const navigate = useNavigate();
-
-  const handleContinueToConfirmation = () => {
-    console.log('Manual redirect to confirmation page');
-    navigate('/booking-confirmed');
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
       {/* Header */}
@@ -68,19 +59,18 @@ const BookTourPage = () => {
               </div>
               <div className="flex items-center">
                 <span className="text-purple-600 mr-2">🔄</span>
-                After form submission, click "Continue to Confirmation" to complete your booking
+                After form submission, you'll be automatically redirected to your booking confirmation
               </div>
             </div>
           </div>
 
           {/* JotForm Embed */}
-          <div className="w-full mb-6">
+          <div className="w-full">
             <iframe
               id="JotFormIFrame-251895754464067"
               title="Tour Booking Form"
               onLoad={() => {
                 console.log('JotForm iframe loaded successfully');
-                // Remove the parent scroll as it can interfere
               }}
               allowTransparency="true"
               allow="geolocation; microphone; camera; fullscreen"
@@ -89,30 +79,12 @@ const BookTourPage = () => {
               style={{
                 minWidth: '100%',
                 maxWidth: '100%',
-                height: '2000px',
+                height: '1200px',
                 border: 'none',
                 display: 'block'
               }}
               scrolling="no"
             />
-          </div>
-
-          {/* Manual Confirmation Button */}
-          <div className="mt-8 text-center">
-            <div className="mb-4 p-4 bg-blue-50 rounded-lg">
-              <p className="text-blue-800 font-medium mb-3">
-                ✅ Form submitted successfully? Click below to continue:
-              </p>
-              <button
-                onClick={handleContinueToConfirmation}
-                className="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-200 shadow-lg"
-              >
-                🎉 Continue to Confirmation Page
-              </button>
-              <p className="text-sm text-gray-600 mt-2">
-                This will take you to your booking confirmation with all the details
-              </p>
-            </div>
           </div>
         </div>
 
