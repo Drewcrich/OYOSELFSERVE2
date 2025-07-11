@@ -89,7 +89,7 @@ const BookTourPage = () => {
               style={{
                 minWidth: '100%',
                 maxWidth: '100%',
-                height: '800px',
+                height: '2000px',
                 border: 'none',
                 display: 'block'
               }}
