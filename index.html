@@ -56,6 +56,52 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="googlebot" content="index, follow" />
     
+    <!-- Global Hash Detection Script for Booking Confirmation -->
+    <script>
+      console.log('Global hash detection script loaded');
+      
+      function checkForSubmittedHash() {
+        console.log('Checking hash:', window.location.hash);
+        if (window.location.hash === '#submitted') {
+          console.log('✅ Hash #submitted detected! Redirecting to confirmation page...');
+          
+          // Clean the hash from URL
+          window.history.replaceState(null, null, window.location.pathname);
+          
+          // Redirect to confirmation page
+          setTimeout(() => {
+            console.log('🚀 Redirecting to /booking-confirmed');
+            window.location.href = '/booking-confirmed';
+          }, 1000);
+          
+          return true;
+        }
+        return false;
+      }
+      
+      // Check immediately when script loads
+      document.addEventListener('DOMContentLoaded', function() {
+        console.log('DOM loaded, checking for hash...');
+        checkForSubmittedHash();
+      });
+      
+      // Check when hash changes
+      window.addEventListener('hashchange', function() {
+        console.log('Hash changed, checking...');
+        checkForSubmittedHash();
+      });
+      
+      // Also check periodically as backup
+      setInterval(function() {
+        if (window.location.pathname === '/book-tour' && window.location.hash === '#submitted') {
+          console.log('Periodic check found #submitted hash');
+          checkForSubmittedHash();
+        }
+      }, 2000);
+      
+      console.log('Hash detection system initialized');
+    </script>
+
     <!-- Additional SEO -->
     <link rel="canonical" href="https://lfuknmco.manus.space" />
     <meta name="theme-color" content="#10B981" />
