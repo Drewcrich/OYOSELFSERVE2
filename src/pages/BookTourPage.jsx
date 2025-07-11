@@ -67,7 +67,6 @@ const BookTourPage = () => {
           {/* JotForm Embed */}
           <div className="w-full">
             <iframe
-              id="JotFormIFrame-251895754464067"
               title="Tour Booking Form"
               onLoad={() => {
                 console.log('JotForm iframe loaded successfully');
@@ -77,10 +76,10 @@ const BookTourPage = () => {
               src="https://form.jotform.com/251895754464067?redirect=https://ownyourownselfserve.com/booking-confirmed"
               frameBorder="0"
               style={{
-                minWidth: '100%',
-                maxWidth: '100%',
-                height: '1200px',
+                width: '100%',
+                height: '1350px',
                 border: 'none',
+                borderRadius: '8px',
                 display: 'block'
               }}
               scrolling="no"
