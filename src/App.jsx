@@ -19,6 +19,7 @@ import CookiePolicyPage from './pages/CookiePolicyPage';
 import RefundPolicyPage from './pages/RefundPolicyPage';
 import AboutUsPage from './pages/AboutUsPage';
 import BookingConfirmedPage from './pages/BookingConfirmedPage';
+import GoogleAdsLandingPage from './pages/GoogleAdsLandingPage';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <main className="main-content">
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/ads" element={<GoogleAdsLandingPage />} />
             <Route path="/pricing" element={<PricingPage />} />
             <Route path="/book-tour" element={<BookTourPage />} />
             <Route path="/rental-setup" element={<RentManagerGuide />} />
