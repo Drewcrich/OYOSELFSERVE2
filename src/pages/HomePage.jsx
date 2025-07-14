@@ -305,7 +305,13 @@ const HomePage = () => {
               <h3 className="text-3xl font-bold mb-6">6-Month Standard</h3>
               <div className="text-5xl font-bold text-gray-800 mb-4">$95<span className="text-2xl">/month</span></div>
               <p className="text-xl text-gray-600 mb-4">Pay monthly within 6-month lease</p>
-              <p className="text-lg text-gray-500 mb-8">Total: $570 for 6 months</p>
+              <p className="text-lg text-gray-500 mb-4">Total: $570 for 6 months</p>
+              
+              {/* Credit Check Notice */}
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
+                <p className="text-lg text-blue-800 font-semibold">📋 Credit Check Required</p>
+                <p className="text-sm text-blue-700 mt-1">Monthly payment plans require credit approval</p>
+              </div>
               
               <ul className="text-left space-y-3 mb-8 text-lg">
                 <li className="flex items-center"><span className="text-green-500 mr-3 text-xl">✓</span>320 sq ft secure container</li>
@@ -332,7 +338,13 @@ const HomePage = () => {
               <div className="text-5xl font-bold text-gray-800 mb-2">$75<span className="text-2xl">/month</span></div>
               <div className="text-lg text-gray-500 line-through mb-4">Was $95/month</div>
               <p className="text-xl text-gray-600 mb-4">Pay 6 months upfront and save</p>
-              <p className="text-lg text-green-600 font-semibold mb-8">Total: $450 (Save $120!)</p>
+              <p className="text-lg text-green-600 font-semibold mb-4">Total: $450 (Save $120!)</p>
+              
+              {/* No Credit Check Highlight */}
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6">
+                <p className="text-lg text-green-800 font-semibold">✅ No Credit Check Required!</p>
+                <p className="text-sm text-green-700 mt-1">Start storing immediately with prepayment</p>
+              </div>
               
               <ul className="text-left space-y-3 mb-8 text-lg">
                 <li className="flex items-center"><span className="text-green-500 mr-3 text-xl">✓</span>320 sq ft secure container</li>
@@ -380,6 +392,15 @@ const HomePage = () => {
             <div className="bg-gray-50 p-8 rounded-lg">
               <h3 className="text-2xl font-semibold mb-4">Can I access it anytime?</h3>
               <p className="text-xl text-gray-700">Yes, 24 hours a day, 7 days a week. Drive right up to your container whenever you need something.</p>
+            </div>
+
+            <div className="bg-gray-50 p-8 rounded-lg">
+              <h3 className="text-2xl font-semibold mb-4">Do you require credit checks?</h3>
+              <p className="text-xl text-gray-700">
+                <span className="font-semibold text-green-600">Prepay for 6 months: No credit check required!</span> Start storing immediately. 
+                <br /><br />
+                Monthly payment plans require a credit check for approval. We recommend prepaying to skip the credit check and start storing right away.
+              </p>
             </div>
 
             <div className="bg-gray-50 p-8 rounded-lg">

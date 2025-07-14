@@ -15,7 +15,7 @@ const TermsOfServicePage = () => {
             These terms govern your use of our storage services and website.
           </p>
           <p className="text-sm text-gray-500 mt-2">
-            <strong>Last Updated:</strong> July 10, 2025
+            <strong>Last Updated:</strong> July 14, 2025
           </p>
         </div>
 
@@ -77,6 +77,39 @@ const TermsOfServicePage = () => {
               The security deposit will be refunded within 30 days of lease termination, provided the 
               container is returned in good condition and all obligations are met.
             </p>
+
+            <h3 className="text-xl font-semibold text-gray-700 mb-3">Credit Check and Payment Plan Requirements</h3>
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
+              <p className="text-gray-600 mb-3">
+                <strong>Monthly Payment Plans:</strong> If you choose to pay monthly ($95/month), a credit check and rental application approval are required before lease execution.
+              </p>
+              <ul className="list-disc list-inside text-gray-600 mb-3 space-y-2">
+                <li>You must provide written authorization for us to obtain consumer reports</li>
+                <li>Credit approval is required before container access is granted</li>
+                <li>The credit check process typically takes 1-2 business days</li>
+                <li>We reserve the right to deny rental applications based on credit evaluation</li>
+              </ul>
+              <div className="bg-green-100 border border-green-300 rounded p-3">
+                <p className="text-green-800 font-semibold mb-2">✅ Skip the Credit Check!</p>
+                <p className="text-green-700 text-sm">
+                  Choose our 6-month prepayment option ($450 total) and start storing immediately - no credit check required!
+                </p>
+              </div>
+            </div>
+
+            <h3 className="text-xl font-semibold text-gray-700 mb-3">FCRA Compliance Notice</h3>
+            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-4">
+              <p className="text-gray-600 mb-3">
+                <strong>Fair Credit Reporting Act (FCRA) Notice:</strong> By applying for monthly payment terms, you acknowledge and agree that:
+              </p>
+              <ul className="list-disc list-inside text-gray-600 space-y-2">
+                <li>We may obtain consumer reports about you from consumer reporting agencies</li>
+                <li>These reports may be used to evaluate your rental application</li>
+                <li>You have the right to request disclosure of the nature and scope of any investigation</li>
+                <li>If adverse action is taken based on credit information, you will receive proper notice</li>
+                <li>You have rights under the FCRA as detailed in our Privacy Policy</li>
+              </ul>
+            </div>
           </section>
 
           {/* Container Use Rules */}

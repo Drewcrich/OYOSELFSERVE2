@@ -22,10 +22,28 @@ const CustomChatbot = () => {
 
   // Q&A Database
   const qaDatabase = [
+    // Credit Check Questions
+    {
+      keywords: ['credit check', 'credit', 'background check', 'approval', 'qualify'],
+      answer: 'Great question! We have two payment options: Monthly payments require a credit check for approval. However, if you prepay for 6 months upfront, NO credit check is required - you can start storing immediately! We recommend prepaying to skip the credit check process.'
+    },
+    {
+      keywords: ['prepay', 'prepaid', 'upfront', 'no credit check', 'avoid credit'],
+      answer: '✅ No credit check required with prepayment! Pay 6 months upfront for just $450 total (save $120!) and start storing immediately. This is our most popular option because it skips the credit check entirely.'
+    },
+    {
+      keywords: ['monthly payment', 'pay monthly', 'credit required'],
+      answer: 'Monthly payment plans ($95/month) require a credit check for approval. The process typically takes 1-2 business days. However, you can skip the credit check entirely by choosing our 6-month prepay option for just $75/month!'
+    },
+    {
+      keywords: ['bad credit', 'poor credit', 'credit score', 'credit history'],
+      answer: 'No worries! With our prepay option, your credit doesn\'t matter at all - no credit check required! Pay 6 months upfront ($450 total) and start storing immediately, regardless of your credit history.'
+    },
+
     // Pricing Questions
     {
       keywords: ['price', 'cost', 'rates', 'how much', 'pricing', 'expensive', 'cheap'],
-      answer: 'Our Grand Opening pricing: $95/month for month-to-month or $75/month with 6-month prepay (save $120!). All containers are 320 square feet with complete weather protection, 24/7 access, and drive-up convenience.'
+      answer: 'Our Grand Opening pricing: $95/month for month-to-month (requires credit check) or $75/month with 6-month prepay (NO credit check needed - save $120!). All containers are 320 square feet with complete weather protection, 24/7 access, and drive-up convenience.'
     },
     {
       keywords: ['special', 'discount', 'deal', 'promotion', 'save'],

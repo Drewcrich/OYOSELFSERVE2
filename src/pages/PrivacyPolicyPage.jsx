@@ -15,7 +15,7 @@ const PrivacyPolicyPage = () => {
             Your privacy is important to us. This policy explains how we collect, use, and protect your information.
           </p>
           <p className="text-sm text-gray-500 mt-2">
-            <strong>Last Updated:</strong> July 10, 2025
+            <strong>Last Updated:</strong> July 14, 2025
           </p>
         </div>
 
@@ -56,6 +56,51 @@ const PrivacyPolicyPage = () => {
               <li><strong>IP Address:</strong> For security and analytics purposes</li>
               <li><strong>Cookies:</strong> To improve website functionality and user experience</li>
             </ul>
+
+            <h3 className="text-xl font-semibold text-gray-700 mb-3">Credit and Background Information</h3>
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
+              <p className="text-gray-600 mb-3">
+                <strong>For Monthly Payment Plans Only:</strong> If you choose monthly payment options, we may obtain credit reports and background information from consumer reporting agencies to evaluate your rental application.
+              </p>
+              <ul className="list-disc list-inside text-gray-600 space-y-2">
+                <li><strong>Credit Reports:</strong> Credit history, payment history, outstanding debts</li>
+                <li><strong>Background Information:</strong> Identity verification, address history</li>
+                <li><strong>Public Records:</strong> Bankruptcy, liens, judgments (if applicable)</li>
+              </ul>
+              <p className="text-sm text-blue-700 mt-3 font-semibold">
+                ✅ No Credit Check Required: Choose our 6-month prepayment option to avoid credit checks entirely!
+              </p>
+            </div>
+          </section>
+
+          {/* FCRA Rights Section */}
+          <section className="mb-8">
+            <h2 className="text-2xl font-bold text-gray-800 mb-4">2A. Your Rights Under the Fair Credit Reporting Act (FCRA)</h2>
+            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-4">
+              <p className="text-gray-600 mb-4">
+                <strong>Important Notice:</strong> If we obtain a consumer report about you for rental evaluation purposes, you have specific rights under the Fair Credit Reporting Act.
+              </p>
+              
+              <h3 className="text-lg font-semibold text-gray-700 mb-3">Your FCRA Rights Include:</h3>
+              <ul className="list-disc list-inside text-gray-600 space-y-2">
+                <li><strong>Right to Know:</strong> We will inform you if we obtain a consumer report about you</li>
+                <li><strong>Right to Consent:</strong> We will obtain your written authorization before requesting credit reports</li>
+                <li><strong>Right to Copies:</strong> You may request copies of any reports we obtain about you</li>
+                <li><strong>Right to Dispute:</strong> You can dispute inaccurate information directly with credit reporting agencies</li>
+                <li><strong>Right to Explanation:</strong> If we take adverse action based on credit information, we will provide you with specific reasons</li>
+              </ul>
+
+              <h3 className="text-lg font-semibold text-gray-700 mb-3 mt-4">Consumer Reporting Agencies We May Use:</h3>
+              <ul className="list-disc list-inside text-gray-600 space-y-1">
+                <li>Experian: www.experian.com | 1-888-397-3742</li>
+                <li>Equifax: www.equifax.com | 1-800-685-1111</li>
+                <li>TransUnion: www.transunion.com | 1-800-916-8800</li>
+              </ul>
+
+              <p className="text-sm text-yellow-700 mt-4">
+                <strong>Free Credit Reports:</strong> You are entitled to a free copy of your credit report annually from each agency at www.annualcreditreport.com
+              </p>
+            </div>
           </section>
 
           {/* How We Use Information */}
@@ -65,6 +110,7 @@ const PrivacyPolicyPage = () => {
               <li>Process tour bookings and rental applications</li>
               <li>Send booking confirmations and container access information</li>
               <li>Process payments and manage rental accounts</li>
+              <li><strong>Evaluate creditworthiness for monthly payment plans (with your consent)</strong></li>
               <li>Communicate about your storage rental and account</li>
               <li>Provide customer support and respond to inquiries</li>
               <li>Improve our website and services</li>
@@ -83,6 +129,7 @@ const PrivacyPolicyPage = () => {
               <li><strong>Rent Manager:</strong> For payment processing and rental account management</li>
               <li><strong>Email Services:</strong> For sending confirmations and communications</li>
               <li><strong>Website Hosting:</strong> For maintaining our online presence</li>
+              <li><strong>Consumer Reporting Agencies:</strong> For credit checks on monthly payment plans (with your written consent)</li>
             </ul>
 
             <h3 className="text-xl font-semibold text-gray-700 mb-3">Legal Requirements</h3>
