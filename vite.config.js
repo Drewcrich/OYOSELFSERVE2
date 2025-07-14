@@ -19,7 +19,13 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',
     port: 3001,
-    allowedHosts: 'all',
+    allowedHosts: [
+      'localhost',
+      '127.0.0.1',
+      '0.0.0.0',
+      '3001-i3p8rsfsuagvlyns2fk6s-dd397c1b.manusvm.computer',
+      '.manusvm.computer'
+    ],
     hmr: {
       host: '0.0.0.0'
     },
