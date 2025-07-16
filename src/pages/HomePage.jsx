@@ -363,6 +363,19 @@ const HomePage = () => {
             </div>
 
           </div>
+
+          {/* Security Deposit Information */}
+          <div className="max-w-4xl mx-auto mt-12">
+            <div className="bg-white border border-gray-200 rounded-lg p-8 text-center">
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">Security Deposit Information</h3>
+              <p className="text-lg text-gray-700">
+                We require a security deposit equal to one month's rent. For example: if you choose the $95/month plan, 
+                your security deposit is $95. If you choose the $75/month plan, your security deposit is $75. 
+                The good news is that your security deposit is fully refunded when your lease ends, as long as the 
+                container is returned in good condition.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 

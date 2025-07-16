@@ -90,7 +90,7 @@ const PricingPage = () => {
           
           <button 
             onClick={() => {
-              navigate('/book-tour');
+              navigate("/book-tour");
               setTimeout(() => window.scrollTo(0, 0), 100);
             }}
             className="plan-button standard-button"
@@ -138,7 +138,7 @@ const PricingPage = () => {
           
           <button 
             onClick={() => {
-              navigate('/book-tour');
+              navigate("/book-tour");
               setTimeout(() => window.scrollTo(0, 0), 100);
             }}
             className="plan-button saver-button"
@@ -162,41 +162,6 @@ const PricingPage = () => {
       </div>
 
       {/* What's Included Section */}
-      <div className="whats-included">
-        <h3 className="included-title">What's Included in Every Plan</h3>
-        <div className="included-grid">
-          <div className="included-item">
-            <div className="included-icon">🔒</div>
-            <h4>Secure Storage</h4>
-            <p>Heavy-duty steel construction with secure locks</p>
-          </div>
-          <div className="included-item">
-            <div className="included-icon">🌧️</div>
-            <h4>Weather Protection</h4>
-            <p>Complete protection from rain, snow, and elements</p>
-          </div>
-          <div className="included-item">
-            <div className="included-icon">🚗</div>
-            <h4>Drive-Up Access</h4>
-            <p>Pull your vehicle right up to your container</p>
-          </div>
-          <div className="included-item">
-            <div className="included-icon">🕐</div>
-            <h4>24/7 Access</h4>
-            <p>Access your belongings anytime, day or night</p>
-          </div>
-          <div className="included-item">
-            <div className="included-icon">📱</div>
-            <h4>Self-Service</h4>
-            <p>No office visits required - everything online</p>
-          </div>
-          <div className="included-item">
-            <div className="included-icon">💳</div>
-            <h4>Online Payments</h4>
-            <p>Secure online payment portal for convenience</p>
-          </div>
-        </div>
-      </div>
 
       {/* FAQ Section */}
       <div className="pricing-faq">

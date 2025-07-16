@@ -78,10 +78,13 @@ const BookTourPage = () => {
               style={{
                 width: '100%',
                 height: '1350px',
+                minHeight: '100vh',
+                maxHeight: 'none',
                 border: 'none',
                 borderRadius: '8px',
                 display: 'block'
               }}
+              className="md:h-[1350px] h-screen min-h-screen"
               scrolling="no"
             />
           </div>
