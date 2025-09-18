@@ -1,118 +1,55 @@
-# OwnYourOwnStorage Website - Updated July 16, 2025
+# Industrial Container Storage Website - Final Version with Email Contact
 
-## Recent Updates
-- **JotForm Mobile Fix**: Resolved mobile responsiveness issue where submit button was not visible when selecting appointment times
-- **Enhanced Mobile Experience**: Improved iframe height handling for better mobile user experience
-- **FCRA Compliance**: Full legal compliance with credit check policies and consumer protection requirements
+Complete React website with Google Ads conversion tracking and email contact information.
 
-## Project Overview
-Professional storage container rental website for University of Illinois students and Urbana community. Features self-service booking, transparent pricing with credit check policies, and mobile-optimized design.
+## 🚀 Quick Start
 
-## Key Features
-- **Self-Service Booking**: JotForm integration with mobile-responsive design
-- **Credit Check Policy**: Clear differentiation between prepaid (no credit check) and monthly (credit check required) options
-- **FCRA Compliance**: Full legal compliance with consumer protection requirements
-- **Mobile-First Design**: Optimized for all devices with touch-friendly interactions
-- **Professional Styling**: Green for positive actions, blue for informational content
-
-## Setup Instructions
-
-### Prerequisites
-- Node.js (version 16 or higher)
-- npm or yarn package manager
-
-### Installation
-1. Extract the zip file to your desired directory
-2. Navigate to the project directory:
-   ```bash
-   cd ownyourownstorage_update_20250716
-   ```
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-### Development
-Start the development server:
 ```bash
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-```
-The site will be available at `http://localhost:5173`
 
-### Build for Production
-Create a production build:
-```bash
+# Build for production
 npm run build
 ```
-The built files will be in the `dist` directory.
 
-## Deployment Options
+## 📧 Latest Update: Email Contact
 
-### Option 1: Netlify
-1. Build the project: `npm run build`
-2. Upload the `dist` folder to Netlify
-3. Configure redirects using the included `_redirects` file
+The booking confirmation page now shows:
+- **Email**: drewcrichardson1999@gmail.com (clickable mailto link)
+- **Text**: "EMAIL US" and "Questions? Email anytime!"
+- **Removed**: Phone number contact information
 
-### Option 2: Vercel
-1. Connect your GitHub repository to Vercel
-2. Vercel will automatically detect the Vite configuration
-3. Deploy with default settings
+## 📊 Google Ads Conversion Tracking
 
-### Option 3: GitHub Pages
-1. Build the project: `npm run build`
-2. Upload contents of `dist` folder to your GitHub Pages repository
-3. Ensure proper routing configuration
+- **Conversion URL**: `https://yourdomain.com/booking-confirmed`
+- **Working redirect**: JotForm → confirmation page
+- **Email contact**: Customers can reach you via email after booking
 
-## File Structure
-```
-ownyourownstorage_update_20250716/
-├── src/
-│   ├── components/
-│   │   ├── Footer.jsx
-│   │   └── CustomChatbot.jsx
-│   ├── pages/
-│   │   ├── HomePage.jsx
-│   │   ├── AboutUsPage.jsx
-│   │   ├── BookTourPage.jsx (Updated with mobile fix)
-│   │   ├── PricingPage.jsx
-│   │   ├── PrivacyPolicyPage.jsx
-│   │   ├── TermsOfServicePage.jsx
-│   │   └── GoogleAdsLandingPage.jsx
-│   ├── App.jsx
-│   ├── index.js
-│   └── index.css
-├── public/
-│   ├── index.html
-│   ├── favicon.ico
-│   └── _redirects
-├── package.json
-├── vite.config.js
-├── tailwind.config.js
-└── README.md
-```
+## 🎨 Complete Features
 
-## Legal Compliance Features
-- **FCRA Compliance**: Privacy Policy includes required consumer protection disclosures
-- **Credit Check Policy**: Clear notices on pricing and throughout the site
-- **Terms of Service**: Updated with credit check requirements and consumer rights
-- **Updated Dates**: All legal pages reflect July 14, 2025 updates
+- ✅ **Industrial Design**: Authentic container storage aesthetic
+- ✅ **Professional Photos**: 11 clean container images
+- ✅ **Google Ads Tracking**: Working conversion page
+- ✅ **Email Contact**: Updated contact information
+- ✅ **Mobile Responsive**: Perfect on all devices
+- ✅ **Family Business Story**: Community-focused narrative
 
-## Mobile Optimization
-- **Responsive Design**: Mobile-first approach with touch-optimized interactions
-- **JotForm Mobile Fix**: Resolved iframe height issues for appointment booking
-- **Fast Loading**: Optimized code and assets for quick mobile loading
-- **Accessibility**: High contrast colors and readable fonts
+## 🛠 Deployment
 
-## Color Scheme
-- **Green**: Positive actions (no credit check, savings, benefits)
-- **Blue**: Informational content (credit check required, standard processes)
-- **Yellow**: Attention items (business hours, important notices)
+1. Upload all files to your GitHub repository
+2. Deploy to your hosting provider
+3. Update your live website at `ownyourownselfserve.com`
+4. Test the booking form flow
 
-## Support
-For technical support or questions about deployment, contact the development team.
+## 📞 Contact Information
 
-## Version History
-- **July 16, 2025**: JotForm mobile responsiveness fix
-- **July 14, 2025**: FCRA compliance updates and legal page revisions
-- **Initial Release**: Complete website with self-service booking system
+After booking, customers will see:
+- Email: drewcrichardson1999@gmail.com
+- Location: Urbana, IL
+- Tour Hours: 7 Days a Week
+
+Ready for immediate deployment!
 
