@@ -12,7 +12,7 @@ const AccessibilityPage = () => {
             <h1 className="text-4xl font-bold text-gray-800">Accessibility Statement</h1>
           </div>
           <p className="text-lg text-gray-600">
-            OwnYourOwnStorage is committed to ensuring digital accessibility for people with disabilities.
+            RentYourOwnStorage is committed to ensuring digital accessibility for people with disabilities.
           </p>
           <p className="text-sm text-gray-500 mt-2">
             <strong>Last Updated:</strong> July 10, 2025
@@ -29,7 +29,7 @@ const AccessibilityPage = () => {
               <h2 className="text-2xl font-bold text-gray-800">Our Commitment</h2>
             </div>
             <p className="text-gray-600 mb-4">
-              OwnYourOwnStorage is committed to ensuring digital accessibility for people with disabilities. 
+              RentYourOwnStorage is committed to ensuring digital accessibility for people with disabilities. 
               We are continually improving the user experience for everyone, and applying the relevant 
               accessibility standards to ensure we provide equal access to all of our users.
             </p>
@@ -134,7 +134,7 @@ const AccessibilityPage = () => {
               <div className="space-y-2">
                 <div className="flex items-center text-gray-700">
                   <Mail size={16} className="mr-2 text-green-500" />
-                  <span><strong>Email:</strong> drewcrichardson1999@gmail.com</span>
+                  <span><strong>Text or Call:</strong> 3055092759</span>
                 </div>
                 <div className="flex items-center text-gray-700">
                   <MapPin size={16} className="mr-2 text-green-500" />

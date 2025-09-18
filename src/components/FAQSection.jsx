@@ -148,10 +148,10 @@ const FAQSection = () => {
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <a 
-            href="mailto:drewcrichardson1999@gmail.com" 
+            href="tel:3055092759" 
             className="bg-green-500 text-white px-6 py-2 rounded-md font-medium hover:bg-green-600 transition-colors text-center"
           >
-            Email Support
+            Text or Call Support
           </a>
         </div>
       </div>

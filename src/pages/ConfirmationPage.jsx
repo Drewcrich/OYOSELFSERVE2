@@ -123,7 +123,7 @@ const ConfirmationPage = () => {
             Contact us anytime for assistance:
           </p>
           <p className="text-yellow-700">
-            📧 <strong>Drewcrichardson1999@gmail.com</strong>
+            📞 <strong>3055092759 (Text or Call)</strong>
           </p>
           <p className="text-yellow-600 text-sm mt-1">
             We typically respond within 1 hour during business hours

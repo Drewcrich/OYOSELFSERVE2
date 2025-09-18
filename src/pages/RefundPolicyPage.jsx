@@ -27,7 +27,7 @@ const RefundPolicyPage = () => {
             <h2 className="text-2xl font-bold text-gray-800 mb-4">Policy Overview</h2>
             <p className="text-gray-600 mb-4">
               This Refund & Cancellation Policy explains our procedures for security deposit returns, 
-              lease cancellations, early termination, and refund processing for OwnYourOwnStorage services.
+              lease cancellations, early termination, and refund processing for RentYourOwnStorage services.
             </p>
             <p className="text-gray-600">
               We are committed to fair and transparent policies that protect both our customers and our business. 
@@ -134,7 +134,7 @@ const RefundPolicyPage = () => {
 
             <h3 className="text-xl font-semibold text-gray-700 mb-3">How to Cancel Your Lease</h3>
             <ol className="list-decimal list-inside text-gray-600 space-y-2 mb-4">
-              <li>Send written cancellation notice to drewcrichardson1999@gmail.com</li>
+              <li>Send written cancellation notice to 3055092759 (Text or Call)</li>
               <li>Include your name, container number, and intended move-out date</li>
               <li>Ensure notice is received at least 30 days before move-out</li>
               <li>Wait for confirmation of your cancellation request</li>
@@ -293,11 +293,11 @@ const RefundPolicyPage = () => {
               If you have questions about this policy or need to process a cancellation or refund:
             </p>
             <div className="bg-green-50 p-4 rounded-lg">
-              <p className="font-semibold text-gray-800 mb-2">OwnYourOwnStorage</p>
+              <p className="font-semibold text-gray-800 mb-2">RentYourOwnStorage</p>
               <div className="space-y-2">
                 <div className="flex items-center text-gray-700">
                   <Mail size={16} className="mr-2 text-green-500" />
-                  <span><strong>Email:</strong> drewcrichardson1999@gmail.com</span>
+                  <span><strong>Text or Call:</strong> 3055092759</span>
                 </div>
                 <div className="flex items-center text-gray-700">
                   <MapPin size={16} className="mr-2 text-green-500" />

@@ -12,7 +12,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center mb-4">
               <Building2 size={28} className="text-green-500 mr-2" />
-              <span className="text-xl font-bold">OwnYourOwnStorage</span>
+              <span className="text-xl font-bold">RentYourOwnStorage</span>
             </div>
             <p className="text-gray-300 mb-4">
               Affordable self-service storage containers in Urbana, IL. 
@@ -25,7 +25,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center text-gray-300">
                 <Mail size={16} className="mr-2 text-green-500" />
-                <span>drewcrichardson1999@gmail.com</span>
+                <span>Text or Call: 3055092759</span>
               </div>
             </div>
           </div>
@@ -39,11 +39,7 @@ const Footer = () => {
                   Home
                 </Link>
               </li>
-              <li>
-                <Link to="/about" className="text-gray-300 hover:text-green-500 transition-colors">
-                  About Us
-                </Link>
-              </li>
+
               <li>
                 <Link to="/pricing" className="text-gray-300 hover:text-green-500 transition-colors">
                   Pricing
@@ -102,7 +98,7 @@ const Footer = () => {
         <div className="border-t border-gray-700 mt-8 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              © 2025 OwnYourOwnStorage. All rights reserved.
+              © 2025 RentYourOwnStorage. All rights reserved.
             </p>
             <div className="flex space-x-4 text-sm flex-wrap">
               <Link to="/privacy-policy" className="text-gray-400 hover:text-green-500 transition-colors">

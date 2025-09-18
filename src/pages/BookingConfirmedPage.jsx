@@ -1,134 +1,197 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { CheckCircle, Calendar, Phone, MapPin, Clock } from 'lucide-react';
 
 const BookingConfirmedPage = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // Google Ads conversion tracking can be added here
+    // gtag('event', 'conversion', {'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL'});
+    
+    // Scroll to top when page loads
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-900 text-white font-sans">
+      {/* Industrial Background */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+        style={{
+          backgroundImage: `url('/industrial_metal_texture.png')`
+        }}
+      />
+      
+      <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Success Header */}
         <div className="text-center mb-12">
-          <div className="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
-            <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-            </svg>
+          <div className="inline-block bg-green-600 border-4 border-green-400 p-6 rounded-full mb-8 shadow-2xl">
+            <CheckCircle size={64} className="text-white" />
           </div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            🎉 Tour Booking Confirmed!
-          </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Thank you for booking a tour with OwnYourOwnStorage. We're excited to show you our secure storage containers!
-          </p>
+          
+          <div className="bg-yellow-500 border-4 border-black px-8 py-4 inline-block mb-6 shadow-xl">
+            <h1 className="text-4xl font-black text-black uppercase tracking-wider">
+              🎉 BOOKING CONFIRMED! 🎉
+            </h1>
+          </div>
+          
+          <div className="bg-orange-600 border-4 border-orange-400 px-6 py-3 inline-block shadow-xl">
+            <p className="text-xl font-black text-white uppercase tracking-wide">
+              Your Container Tour is Scheduled!
+            </p>
+          </div>
         </div>
 
         {/* Confirmation Details */}
-        <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">What Happens Next?</h2>
-          
-          <div className="space-y-6">
-            <div className="flex items-start">
-              <div className="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                <span className="text-green-600 font-bold">1</span>
-              </div>
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-gray-800 border-4 border-gray-600 p-8 shadow-2xl mb-8">
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* What Happens Next */}
               <div>
-                <h3 className="text-lg font-semibold text-gray-900">Email Confirmation</h3>
-                <p className="text-gray-600">You'll receive a confirmation email within the next few minutes with your tour details.</p>
+                <div className="bg-orange-600 border-2 border-orange-400 px-4 py-2 mb-6 inline-block">
+                  <h2 className="text-2xl font-black text-white uppercase">What Happens Next</h2>
+                </div>
+                
+                <div className="space-y-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-yellow-500 border-2 border-yellow-400 w-12 h-12 flex items-center justify-center font-black text-black text-xl">
+                      1
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-black text-orange-400 mb-2">CONFIRMATION CALL</h3>
+                      <p className="text-gray-300 font-bold">We'll call you within 1 hour to confirm your tour time and answer any questions.</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-yellow-500 border-2 border-yellow-400 w-12 h-12 flex items-center justify-center font-black text-black text-xl">
+                      2
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-black text-orange-400 mb-2">CONTAINER TOUR</h3>
+                      <p className="text-gray-300 font-bold">See our 320 sq ft containers, check security, and pick your perfect storage solution.</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-yellow-500 border-2 border-yellow-400 w-12 h-12 flex items-center justify-center font-black text-black text-xl">
+                      3
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-black text-orange-400 mb-2">SAME-DAY MOVE-IN</h3>
+                      <p className="text-gray-300 font-bold">If you like what you see, move in today! No waiting, no hassle.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
 
-            <div className="flex items-start">
-              <div className="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                <span className="text-green-600 font-bold">2</span>
-              </div>
+              {/* Contact Information */}
               <div>
-                <h3 className="text-lg font-semibold text-gray-900">Personal Contact</h3>
-                <p className="text-gray-600">We'll reach out to you within 24 hours to schedule your personalized tour.</p>
-              </div>
-            </div>
-
-            <div className="flex items-start">
-              <div className="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                <span className="text-green-600 font-bold">3</span>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900">Tour Experience</h3>
-                <p className="text-gray-600">See our 320 sq ft containers, security features, and 24/7 access system in person.</p>
-              </div>
-            </div>
-
-            <div className="flex items-start">
-              <div className="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                <span className="text-green-600 font-bold">4</span>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900">Easy Booking</h3>
-                <p className="text-gray-600">If you love what you see, we can get you set up with a container right away!</p>
+                <div className="bg-orange-600 border-2 border-orange-400 px-4 py-2 mb-6 inline-block">
+                  <h2 className="text-2xl font-black text-white uppercase">Contact Information</h2>
+                </div>
+                
+                <div className="space-y-6">
+                  <div className="bg-gray-900 border-2 border-gray-700 p-6">
+                    <div className="flex items-center space-x-4 mb-4">
+                      <Phone size={24} className="text-orange-400" />
+                      <div>
+                        <h3 className="text-xl font-black text-orange-400">TEXT OR CALL</h3>
+                        <a href="tel:3055092759" className="text-xl font-black text-white hover:text-yellow-400 transition-colors">
+                          3055092759
+                        </a>
+                      </div>
+                    </div>
+                    <p className="text-gray-300 font-bold">Questions? Text or Call anytime!</p>
+                  </div>
+                  
+                  <div className="bg-gray-900 border-2 border-gray-700 p-6">
+                    <div className="flex items-center space-x-4 mb-4">
+                      <MapPin size={24} className="text-orange-400" />
+                      <div>
+                        <h3 className="text-xl font-black text-orange-400">LOCATION</h3>
+                        <p className="text-white font-bold">Urbana, IL</p>
+                      </div>
+                    </div>
+                    <p className="text-gray-300 font-bold">Easy access, secure facility</p>
+                  </div>
+                  
+                  <div className="bg-gray-900 border-2 border-gray-700 p-6">
+                    <div className="flex items-center space-x-4 mb-4">
+                      <Clock size={24} className="text-orange-400" />
+                      <div>
+                        <h3 className="text-xl font-black text-orange-400">TOUR HOURS</h3>
+                        <p className="text-white font-bold">7 Days a Week</p>
+                      </div>
+                    </div>
+                    <p className="text-gray-300 font-bold">Flexible scheduling available</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        {/* Contact Information */}
-        <div className="bg-green-50 rounded-lg p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Questions? We're Here to Help!</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Email Us</h3>
-              <p className="text-gray-600">
-                <a href="mailto:drewcrichardson1999@gmail.com" className="text-green-600 hover:text-green-700">
-                  drewcrichardson1999@gmail.com
-                </a>
-              </p>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Visit Our Location</h3>
-              <p className="text-gray-600">
-                1502 Airport Road<br />
-                Urbana, IL 61802
-              </p>
+          {/* Special Offer */}
+          <div className="bg-yellow-500 border-4 border-black p-8 shadow-2xl text-center mb-8">
+            <h2 className="text-3xl font-black text-black uppercase tracking-wider mb-4">
+              ⚠️ TOUR DAY SPECIAL ⚠️
+            </h2>
+            <p className="text-xl font-black text-black mb-4">
+              BOOK YOUR CONTAINER TODAY AND GET:
+            </p>
+            <div className="grid md:grid-cols-2 gap-4 text-black font-black">
+              <div className="bg-orange-600 border-2 border-black p-4">
+                <p className="text-lg">✅ NO SECURITY DEPOSIT</p>
+              </div>
+              <div className="bg-orange-600 border-2 border-black p-4">
+                <p className="text-lg">✅ FIRST MONTH $75</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Quick Actions */}
-        <div className="text-center space-y-4">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">While You Wait...</h2>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/pricing"
-              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 transition-colors"
+          {/* Navigation Buttons */}
+          <div className="text-center space-y-4">
+            <button
+              onClick={() => navigate('/')}
+              className="bg-orange-600 hover:bg-orange-700 border-4 border-orange-400 text-white px-8 py-4 text-xl font-black uppercase tracking-wide shadow-xl transition-all duration-200 hover:scale-105 mr-4"
             >
-              Review Our Pricing
-            </Link>
+              ← Back to Homepage
+            </button>
             
-            <Link
-              to="/about"
-              className="inline-flex items-center px-6 py-3 border border-green-600 text-base font-medium rounded-md text-green-600 bg-white hover:bg-green-50 transition-colors"
+            <button
+              onClick={() => navigate('/pricing')}
+              className="bg-green-600 hover:bg-green-700 border-4 border-green-400 text-white px-8 py-4 text-xl font-black uppercase tracking-wide shadow-xl transition-all duration-200 hover:scale-105"
             >
-              Learn More About Us
-            </Link>
-            
-            <Link
-              to="/"
-              className="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors"
-            >
-              Return to Home
-            </Link>
+              View Pricing Details →
+            </button>
           </div>
-        </div>
 
-        {/* Social Proof */}
-        <div className="mt-12 text-center">
-          <p className="text-gray-600 mb-4">Join hundreds of satisfied customers in Urbana!</p>
-          <div className="flex justify-center items-center space-x-2">
-            <div className="flex text-yellow-400">
-              {[...Array(5)].map((_, i) => (
-                <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-              ))}
+          {/* Trust Signals */}
+          <div className="mt-12 grid md:grid-cols-3 gap-6 text-center">
+            <div className="bg-gray-800 border-2 border-gray-600 p-6">
+              <div className="bg-green-600 border-2 border-green-400 w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <CheckCircle size={32} className="text-white" />
+              </div>
+              <h3 className="text-lg font-black text-green-400 mb-2 uppercase">FULLY INSURED</h3>
+              <p className="text-gray-300 font-bold">Your belongings are protected</p>
             </div>
-            <span className="text-gray-600 ml-2">Trusted by University of Illinois students and local businesses</span>
+            
+            <div className="bg-gray-800 border-2 border-gray-600 p-6">
+              <div className="bg-blue-600 border-2 border-blue-400 w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Calendar size={32} className="text-white" />
+              </div>
+              <h3 className="text-lg font-black text-blue-400 mb-2 uppercase">FAMILY OWNED</h3>
+              <p className="text-gray-300 font-bold">Local Urbana business since years</p>
+            </div>
+            
+            <div className="bg-gray-800 border-2 border-gray-600 p-6">
+              <div className="bg-orange-600 border-2 border-orange-400 w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Phone size={32} className="text-white" />
+              </div>
+              <h3 className="text-lg font-black text-orange-400 mb-2 uppercase">24/7 SUPPORT</h3>
+              <p className="text-gray-300 font-bold">Always here when you need us</p>
+            </div>
           </div>
         </div>
       </div>

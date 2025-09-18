@@ -19,7 +19,7 @@ const Header = () => {
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center" onClick={closeMenu}>
             <Building2 size={28} style={{ color: '#22c55e' }} className="mr-2" />
-            <span className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800">OwnYourOwnStorage</span>
+            <span className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800">RentYourOwnStorage</span>
           </Link>
           
           {/* Desktop Navigation */}
@@ -30,12 +30,7 @@ const Header = () => {
             >
               Home
             </Link>
-            <Link 
-              to="/about" 
-              className="text-lg text-gray-700 hover:text-green-500 font-medium transition-colors duration-200"
-            >
-              About
-            </Link>
+
             <Link 
               to="/pricing" 
               className="text-lg text-gray-700 hover:text-green-500 font-medium transition-colors duration-200"
@@ -76,13 +71,7 @@ const Header = () => {
               >
                 Home
               </Link>
-              <Link 
-                to="/about" 
-                className="text-lg text-gray-700 hover:text-green-500 font-medium transition-colors duration-200 py-3 border-b border-gray-100"
-                onClick={closeMenu}
-              >
-                About
-              </Link>
+
               <Link 
                 to="/pricing" 
                 className="text-lg text-gray-700 hover:text-green-500 font-medium transition-colors duration-200 py-3 border-b border-gray-100"

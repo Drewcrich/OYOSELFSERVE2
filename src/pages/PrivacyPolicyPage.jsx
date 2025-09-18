@@ -26,14 +26,14 @@ const PrivacyPolicyPage = () => {
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">1. Company Information</h2>
             <div className="bg-gray-50 p-4 rounded-lg">
-              <p className="font-semibold text-gray-800 mb-2">OwnYourOwnStorage</p>
+              <p className="font-semibold text-gray-800 mb-2">RentYourOwnStorage</p>
               <div className="flex items-center text-gray-600 mb-2">
                 <MapPin size={16} className="mr-2" />
                 <span>1502 Airport Road, Urbana, IL 61802</span>
               </div>
               <div className="flex items-center text-gray-600 mb-2">
                 <Mail size={16} className="mr-2" />
-                <span>drewcrichardson1999@gmail.com</span>
+                <span>Text or Call: 3055092759</span>
               </div>
             </div>
           </section>
@@ -187,7 +187,7 @@ const PrivacyPolicyPage = () => {
               <li><strong>Portability:</strong> Request transfer of your information to another service</li>
             </ul>
             <p className="text-gray-600">
-              To exercise these rights, contact us at drewcrichardson1999@gmail.com.
+              To exercise these rights, contact us at 3055092759 (Text or Call).
             </p>
           </section>
 
@@ -261,7 +261,7 @@ const PrivacyPolicyPage = () => {
             <div className="bg-green-50 p-4 rounded-lg">
               <div className="flex items-center text-gray-700 mb-2">
                 <Mail size={16} className="mr-2 text-green-500" />
-                <span><strong>Email:</strong> drewcrichardson1999@gmail.com</span>
+                <span><strong>Text or Call:</strong> 3055092759</span>
               </div>
               <div className="flex items-center text-gray-700">
                 <MapPin size={16} className="mr-2 text-green-500" />

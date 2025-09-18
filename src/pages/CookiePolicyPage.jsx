@@ -39,7 +39,7 @@ const CookiePolicyPage = () => {
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">How We Use Cookies</h2>
             <p className="text-gray-600 mb-4">
-              OwnYourOwnStorage uses cookies for several purposes to enhance your experience on our website:
+              RentYourOwnStorage uses cookies for several purposes to enhance your experience on our website:
             </p>
             <ul className="list-disc list-inside text-gray-600 space-y-2">
               <li><strong>Essential Website Functions:</strong> Enable basic website features like navigation and secure areas</li>
@@ -249,8 +249,8 @@ const CookiePolicyPage = () => {
               If you have questions about our use of cookies or this Cookie Policy, please contact us:
             </p>
             <div className="bg-green-50 p-4 rounded-lg">
-              <p className="font-semibold text-gray-800 mb-2">OwnYourOwnStorage</p>
-              <p className="text-gray-700 mb-1"><strong>Email:</strong> drewcrichardson1999@gmail.com</p>
+              <p className="font-semibold text-gray-800 mb-2">RentYourOwnStorage</p>
+              <p className="text-gray-700 mb-1"><strong>Text or Call:</strong> 3055092759</p>
               <p className="text-gray-700"><strong>Address:</strong> 1502 Airport Road, Urbana, IL 61802</p>
             </div>
           </section>

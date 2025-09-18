@@ -168,7 +168,7 @@ const RentManagerGuide = () => {
               </h3>
               <p className="text-gray-600">
                 If you encounter any issues during setup, contact us immediately at 
-                drewcrichardson1999@gmail.com. We're here to help you 
+                3055092759. We're here to help you 
                 complete the process smoothly.
               </p>
             </div>
@@ -269,7 +269,7 @@ const RentManagerGuide = () => {
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a 
-              href="mailto:drewcrichardson1999@gmail.com"
+              href="tel:3055092759"
               className="bg-white text-green-500 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition-colors text-center"
             >
               Email Support

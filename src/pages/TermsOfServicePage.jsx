@@ -26,12 +26,12 @@ const TermsOfServicePage = () => {
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">1. Acceptance of Terms</h2>
             <p className="text-gray-600 mb-4">
-              By accessing our website, booking a tour, or renting a storage container from OwnYourOwnStorage, 
+              By accessing our website, booking a tour, or renting a storage container from RentYourOwnStorage, 
               you agree to be bound by these Terms of Service and our Privacy Policy. If you do not agree 
               to these terms, please do not use our services.
             </p>
             <p className="text-gray-600">
-              These terms constitute a legally binding agreement between you and OwnYourOwnStorage, 
+              These terms constitute a legally binding agreement between you and RentYourOwnStorage, 
               located at 1502 Airport Road, Urbana, IL 61802.
             </p>
           </section>
@@ -40,7 +40,7 @@ const TermsOfServicePage = () => {
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">2. Services Description</h2>
             <p className="text-gray-600 mb-4">
-              OwnYourOwnStorage provides self-service storage container rental services, including:
+              RentYourOwnStorage provides self-service storage container rental services, including:
             </p>
             <ul className="list-disc list-inside text-gray-600 space-y-2">
               <li>40ft x 8ft x 10ft (320 sq ft) storage containers</li>
@@ -299,7 +299,7 @@ const TermsOfServicePage = () => {
             <h3 className="text-xl font-semibold text-gray-700 mb-3">Intellectual Property</h3>
             <p className="text-gray-600 mb-4">
               All content on our website, including text, images, logos, and design, is owned by 
-              OwnYourOwnStorage or our licensors and is protected by copyright and trademark laws.
+              RentYourOwnStorage or our licensors and is protected by copyright and trademark laws.
             </p>
 
             <h3 className="text-xl font-semibold text-gray-700 mb-3">Third-Party Services</h3>
@@ -361,9 +361,9 @@ const TermsOfServicePage = () => {
               For questions about these Terms of Service or our storage services, contact us:
             </p>
             <div className="bg-green-50 p-4 rounded-lg">
-              <p className="font-semibold text-gray-800 mb-2">OwnYourOwnStorage</p>
+              <p className="font-semibold text-gray-800 mb-2">RentYourOwnStorage</p>
               <p className="text-gray-700 mb-1"><strong>Address:</strong> 1502 Airport Road, Urbana, IL 61802</p>
-              <p className="text-gray-700"><strong>Email:</strong> drewcrichardson1999@gmail.com</p>
+              <p className="text-gray-700"><strong>Text or Call:</strong> 3055092759</p>
             </div>
           </section>
 

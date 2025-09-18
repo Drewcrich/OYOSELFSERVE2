@@ -121,7 +121,7 @@ const CustomChatbot = () => {
     // Contact
     {
       keywords: ['contact', 'phone', 'email', 'call', 'reach'],
-      answer: 'You can contact us at: Drew Richardson (drewcrichardson1999@gmail.com), Quinn Richardson (quinnarichardson@gmail.com), or visit www.willowspringsurbana.com'
+      answer: 'You can contact us at: Text or Call 3055092759, or visit www.willowspringsurbana.com'
     },
 
     // Business Storage
@@ -161,7 +161,7 @@ const CustomChatbot = () => {
     }
 
     // Default response for unmatched questions
-    return 'I\'d be happy to help! For specific questions I haven\'t covered, please contact us directly at drewcrichardson1999@gmail.com. You can also book a free tour online to see our containers in person!';
+    return 'I\'d be happy to help! For specific questions I haven\'t covered, please contact us directly at 3055092759 (Text or Call). You can also book a free tour online to see our containers in person!';
   };
 
   const handleSendMessage = () => {
@@ -235,7 +235,7 @@ const CustomChatbot = () => {
           {/* Header */}
           <div className="bg-green-500 text-white p-4 rounded-t-lg flex justify-between items-center">
             <div>
-              <h3 className="font-semibold">Own Your Own Storage</h3>
+              <h3 className="font-semibold">Rent Your Own Storage</h3>
               <p className="text-sm opacity-90">Ask me anything!</p>
             </div>
             <button

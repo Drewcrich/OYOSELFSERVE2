@@ -14,7 +14,7 @@ const AboutUsPage = () => {
             <h1 className="text-4xl font-bold text-gray-800">About Us</h1>
           </div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Learn about the story behind OwnYourOwnStorage and our commitment to providing 
+            Learn about the story behind RentYourOwnStorage and our commitment to providing 
             affordable, convenient storage solutions in Urbana, Illinois.
           </p>
         </div>
@@ -32,7 +32,7 @@ const AboutUsPage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
                 <p className="text-gray-600 text-lg leading-relaxed mb-4">
-                  OwnYourOwnStorage was born from a simple idea: storage should be easy, affordable, 
+                  RentYourOwnStorage was born from a simple idea: storage should be easy, affordable, 
                   and accessible to everyone. As longtime residents of Urbana, we saw firsthand the 
                   challenges that University of Illinois students, local families, and businesses 
                   faced when looking for reliable storage solutions.
@@ -124,7 +124,7 @@ const AboutUsPage = () => {
           <section className="bg-white rounded-lg shadow-lg p-8">
             <div className="flex items-center mb-6">
               <Star size={32} className="text-green-500 mr-4" />
-              <h2 className="text-3xl font-bold text-gray-800">Why Choose OwnYourOwnStorage?</h2>
+              <h2 className="text-3xl font-bold text-gray-800">Why Choose RentYourOwnStorage?</h2>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -271,7 +271,7 @@ const AboutUsPage = () => {
                     <Mail size={20} className="text-blue-500 mr-2" />
                     <span className="font-semibold text-gray-800">Contact</span>
                   </div>
-                  <p className="text-gray-700">drewcrichardson1999@gmail.com</p>
+                  <p className="text-gray-700">Text or Call: 3055092759</p>
                 </div>
               </div>
               
